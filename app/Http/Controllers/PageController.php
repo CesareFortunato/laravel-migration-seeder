@@ -9,7 +9,9 @@ class PageController extends Controller
 {
     public function index()
     {
-        $trains = Train::where('orario_partenza', '>=', today())
+
+
+        $trains = Train::whereDate('orario_partenza', '>=', today())
             ->orderBy('orario_partenza', 'asc')
             ->get();
 
