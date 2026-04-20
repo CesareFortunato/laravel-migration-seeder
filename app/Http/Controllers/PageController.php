@@ -11,7 +11,7 @@ class PageController extends Controller
     {
 
 
-        $trains = Train::whereDate('orario_partenza', '>=', today())
+        $trains = Train::whereDate('orario_partenza', '>=', today())  //uso wheredate perchè m'interessa solo la data
             ->orderBy('orario_partenza', 'asc')
             ->get();
 

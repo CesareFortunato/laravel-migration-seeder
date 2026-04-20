@@ -78,7 +78,7 @@
 
                         <td>{{ $train->stazione_arrivo }}</td>
 
-                        <td>{{ \Carbon\Carbon::parse($train->orario_partenza)->format('H:i') }}</td>
+                        <td>{{ substr($train->orario_partenza, 0, 5) }}</td>
 
                         <td>{{ $train->binario ?? '-' }}</td>
 
