@@ -20,7 +20,7 @@ return new class extends Migration {
             $table->unsignedTinyInteger('totale_carrozze');
             $table->boolean('in_orario');
             $table->boolean('cancellato');
-            $table->unsignedTinyInteger('ritardo')->nullable();
+            $table->unsignedSmallInteger('ritardo')->nullable();
             $table->string('binario')->nullable();
 
 
