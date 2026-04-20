@@ -11,21 +11,17 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('trains', function (Blueprint $table) {
-            $table->id();
-
             $table->string('azienda');
             $table->string('stazione_partenza');
             $table->string('stazione_arrivo');
-
             $table->dateTime('orario_partenza');
             $table->dateTime('orario_arrivo');
-
             $table->string('codice_treno');
-
             $table->unsignedTinyInteger('totale_carrozze');
-
             $table->boolean('in_orario');
             $table->boolean('cancellato');
+            $table->unsignedTinyInteger('ritardo')->nullable();
+            $table->string('binario')->nullable();
 
 
             $table->timestamps();
